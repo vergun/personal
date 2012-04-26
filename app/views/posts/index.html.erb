@@ -1,0 +1,30 @@
+
+<section class="posts-list">
+
+  <% @posts.each do |post| %>
+    <table>
+      <tr>
+        <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", post %></td>
+      </tr>
+    </table>
+  <% end %>
+
+  <div class="new-post">
+  <%= link_to 'New Post', new_post_path %>
+  </div>
+
+</section>
+
+
+
+<section class="main-post">
+
+      <div class="main-post-title"><%= @posts.last.title %></div>
+      <div class="main-post-content"><%= raw @posts.last.content %></div>
+</section>
+
+
+
+
+
+

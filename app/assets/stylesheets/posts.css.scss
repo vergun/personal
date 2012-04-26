@@ -1,0 +1,112 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.posts-list {
+    float: left;
+    width: 15%;
+    padding: 0 50px 0 0;
+    border-right: 1px solid rgba(65, 65, 65, .5);
+}
+.posts-list table tr td {
+    padding: 10px;
+}
+.posts-list table tr td a {
+    font: normal 18px 'StMarieThin', Georgia, serif;
+    color: rgba(65, 65, 65, 1);
+}
+.posts-list table tr td a:hover {
+    color: orange;
+}
+.posts-list table tr td a:active {
+    color: orange;
+}
+.posts-list table tr td a:visited {
+    text-decoration: none;
+    font: normal 18px 'StMarieThin', Georgia, serif;
+}
+.new-post {
+    display:none;
+}
+.main-post {
+    float: left;
+    margin-left: 50px;
+    width: 70%;
+    min-width: 20%;
+}
+.main-post .main-post-title {
+    font: normal 50px 'StMarieThin', Georgia, serif;
+    letter-spacing: 130%;
+    line-height: 130%;
+}
+.main-post .main-post-content {
+    padding-top: 10px;
+    font: normal 15px 'DejaVuSansBook', Helvetica, sans-serif;
+    letter-spacing: 130%;
+    line-height: 130%;
+}
+.main-post .main-post-content p {
+    padding: 10px;
+}
+
+/*
+.introduction {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font: normal 30px 'MarketingScriptRegular', Georgia, serif;
+    color: white;
+    background: black;
+    letter-spacing: 2px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.introduction a {
+    color: rgba(208, 208, 198, 1);
+}
+.introduction a:hover {
+    color: yellow;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#section-two {
+    text-decoration: none;
+    text-align:center;
+    font: normal 24px 'MarketingScriptRegular', Georgia, serif;
+    width:100%;
+    color:yellow;
+    background:rgba(249, 249, 249, .5);
+}
+#section-two a {
+    color:white;
+}
+#section-two:hover {
+    background: yellow;
+     -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#section-three {
+    background: rgba(108, 208, 198, .5);
+    height: 65px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+   
+}
+#section-three a {
+    color: grey;
+}
+#section-three:hover {
+     -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+#section-three footer {
+    padding-top: 30px;
+    font: normal 10px 'LeagueGothicRegular', Tahoma, Arial, sans-serif;
+    color: grey;
+}
+*/

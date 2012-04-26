@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<html>
+<head>
+  <title>Verdi Ergun</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+	<nav class="navigation">
+		<ul>
+			<a href="/"><li>Home</li></a>
+			<a href="/"><li>About</li></a>
+		</ul>
+	</nav>
+
+	<div class="container">
+
+	<%= yield %>
+
+	</div>
+
+</body>
+
+</html>
+

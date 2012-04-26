@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+@font-face {
+    font-family: 'StMarieThin';
+    src: url('StMarie-Thin-webfont.eot');
+    src: url('StMarie-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('StMarie-Thin-webfont.woff') format('woff'),
+         url('StMarie-Thin-webfont.ttf') format('truetype'),
+         url('StMarie-Thin-webfont.svg#StMarieThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DejaVuSansBook';
+    src: url('DejaVuSans-webfont.eot');
+    src: url('DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DejaVuSans-webfont.woff') format('woff'),
+         url('DejaVuSans-webfont.ttf') format('truetype'),
+         url('DejaVuSans-webfont.svg#DejaVuSansBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'DejaVuSansBold';
+    src: url('DejaVuSans-Bold-webfont.eot');
+    src: url('DejaVuSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('DejaVuSans-Bold-webfont.woff') format('woff'),
+         url('DejaVuSans-Bold-webfont.ttf') format('truetype'),
+         url('DejaVuSans-Bold-webfont.svg#DejaVuSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	text-align: center;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+.navigation {
+	background: rgba(65, 65, 65, 1);
+	height: 25px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-box-shadow: 2px 2px 3px #afafaf;
+	-moz-box-shadow: 2px 2px 3px #afafaf;
+	box-shadow: 2px 2px 1px #afafaf;
+	width: 100%;
+	text-align: right;
+}
+.navigation ul li {
+	display: inline;
+	font: normal 18px 'StMarieThin', Georgia, Serif;
+	margin: 50px;
+	color: cornsilk;
+	-webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+	-moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+	text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+}
+.navigation ul li:hover {
+	color: yellow;
+}
+.navigation ul li:active {
+	color: yellow;
+}
+.navigation ul li:visited {
+	text-decoration: none;
+	color: cornsilk;
+}
+.container {
+	text-align: left;
+	margin: auto auto;
+	padding: 20px;
+}
+
