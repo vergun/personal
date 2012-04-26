@@ -7,12 +7,13 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 gem 'pg'
+gem 'sass-rails',   '~> 3.2.3' #moved this out of the asset group below (verdi)
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
