@@ -7,7 +7,7 @@
     padding: 0 50px 0 0;
     border-right: 1px solid rgba(65, 65, 65, .5);
 }
-.posts-list table tr td {
+table tr td {
     padding: 10px;
 }
 .posts-list table tr td a {
@@ -16,14 +16,11 @@
 }
 .posts-list table tr td a:hover {
     color: orange;
-    text-decoration: underline;
 }
 .posts-list table tr td a:active {
     color: orange;
-    text-decoration: underline;
 }
 .posts-list table tr td a:visited {
-    text-decoration: none;
     font: normal 18px 'StMarieThin', Georgia, serif;
 }
 .new-post {
@@ -31,9 +28,8 @@
 }
 .main-post {
     float: left;
-    margin-left: 50px;
+    margin-left: 40px;
     width: 65%;
-    min-width: 20%;
 }
 .main-post .main-post-title {
     font: normal 50px 'StMarieThin', Georgia, serif;
@@ -46,9 +42,6 @@
     font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
     letter-spacing: 150%;
     line-height: 200%;
-}
-.main-post .main-post-content p {
-    padding: 10px;
 }
 .profile {
     float: left;

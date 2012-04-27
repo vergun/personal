@@ -22,8 +22,8 @@
 
 <% if !@posts.empty? %>
 <section class="main-post">
-      <div class="main-post-title"><%= @posts.last.title %></div>
-      <div class="main-post-content"><%= raw @posts.last.content %></div>
+      <div class="main-post-title"><%= @posts.first.title %></div>
+      <div class="main-post-content"><%= raw @posts.first.content %></div>
 </section>
 
 <% else %>

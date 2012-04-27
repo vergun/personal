@@ -116,6 +116,12 @@ body {
 	text-align: center;
 	line-height: 1;
 }
+.container {
+	text-align: left;
+	margin: auto auto;
+	width: 800px;
+	padding: 35px 0 10px 0;
+}
 ol, ul {
 	list-style: none;
 }
@@ -134,41 +140,33 @@ table {
 a {
     text-decoration: none;
 }
-.navigation {
-	background: rgba(65, 65, 65, 1);
-	height: 25px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: underline;
+}
+a:visited {
+	text-decoration: none;
+}
+p {
+	padding: 10px 0px 10px 0px;
+}
+em {
+	text-decoration: italic;
+}
+strong {
+	text-decoration: bold;
+}
+.code {
+	border: 1px solid grey;
+	color: yellow;
 	-webkit-box-shadow: 2px 2px 3px #afafaf;
 	-moz-box-shadow: 2px 2px 3px #afafaf;
 	box-shadow: 2px 2px 1px #afafaf;
-	width: 100%;
-	text-align: right;
-}
-.navigation ul li {
-	display: inline;
-	font: normal 18px 'StMarieThin', Georgia, Serif;
-	margin: 50px;
-	color: cornsilk;
 	-webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
 	-moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
 	text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
 }
-.navigation ul li:hover {
-	color: yellow;
-}
-.navigation ul li:active {
-	color: yellow;
-}
-.navigation ul li:visited {
-	text-decoration: none;
-	color: cornsilk;
-}
-.container {
-	text-align: left;
-	align: center;
-	margin: auto auto;
-	padding: 20px;
-	width: 800px;
-}
+
 
