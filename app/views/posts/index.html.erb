@@ -10,6 +10,7 @@
       </table>
     <% end %>
     <% else %>
+      There are no posts.
     <% end %>
 
   <div class="new-post">
@@ -21,13 +22,18 @@
 
 <% if !@posts.empty? %>
 <section class="main-post">
-
       <div class="main-post-title"><%= @posts.last.title %></div>
       <div class="main-post-content"><%= raw @posts.last.content %></div>
 </section>
 
 <% else %>
+  There are no posts.
 <% end %>
+
+<div class="profile">
+<%= image_tag "verdi.jpg" %>
+<span class="greeting">Hello.</span>
+</div>
 
 
 

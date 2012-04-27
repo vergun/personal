@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .posts-list {
     float: left;
-    width: 15%;
+    width: 10%;
     padding: 0 50px 0 0;
     border-right: 1px solid rgba(65, 65, 65, .5);
 }
@@ -16,9 +16,11 @@
 }
 .posts-list table tr td a:hover {
     color: orange;
+    text-decoration: underline;
 }
 .posts-list table tr td a:active {
     color: orange;
+    text-decoration: underline;
 }
 .posts-list table tr td a:visited {
     text-decoration: none;
@@ -30,22 +32,33 @@
 .main-post {
     float: left;
     margin-left: 50px;
-    width: 70%;
+    width: 65%;
     min-width: 20%;
 }
 .main-post .main-post-title {
     font: normal 50px 'StMarieThin', Georgia, serif;
     letter-spacing: 130%;
     line-height: 130%;
+    padding: 0 0 20px 0;
 }
 .main-post .main-post-content {
     padding-top: 10px;
-    font: normal 15px 'DejaVuSansBook', Helvetica, sans-serif;
-    letter-spacing: 130%;
-    line-height: 130%;
+    font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
+    letter-spacing: 150%;
+    line-height: 200%;
 }
 .main-post .main-post-content p {
     padding: 10px;
+}
+.profile {
+    float: left;
+    width: 5%;
+    padding: 10px;
+    height: 100%;
+}
+.profile .greeting {
+    font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
+    margin: auto auto;
 }
 
 /*
