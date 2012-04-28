@@ -1,12 +1,11 @@
 
 
 <section class="posts-list">
-
     <% if !@posts.empty? %>
-      <% @posts.each do |post| %>
+      <% @posts_list.each do |post| %>
       <table>
         <tr>
-          <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", post %></td>
+          <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
         </tr>
       </table>
     <% end %>
@@ -25,13 +24,13 @@
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-previous"><% if @posts.previous_page %>
           <%= link_to "Previous", params.merge(:page => @posts.previous_page) %>
+          <% end %>
         </div>
-        <% end %>
         <% if @posts.next_page %>
         <div class="main-post-navigation-next">
           <%= link_to "Next", params.merge(:page => @posts.next_page) %>
-        </div>
         <% end %>
+        </div>
       </footer>
 </section>
 <% end %>
