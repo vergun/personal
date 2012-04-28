@@ -1,4 +1,5 @@
 
+
 <section class="posts-list">
 
     <% if !@posts.empty? %>
@@ -13,10 +14,6 @@
       There are no posts.
     <% end %>
 
-  <div class="new-post">
-  <%= link_to 'New Post', new_post_path %>
-  </div>
-
 </section>
 
 
@@ -24,17 +21,31 @@
 <section class="main-post">
       <div class="main-post-title"><%= @posts.first.title %></div>
       <div class="main-post-content"><%= raw @posts.first.content %></div>
+      <div class="main-post-date-time"><%= @posts.first.created_at.strftime("%B %e, %Y") %></div>
+      <footer class="main-post-navigation">
+        <div class ="main-post-navigation-previous"><% if @posts.previous_page %>
+          <%= link_to "Previous", params.merge(:page => @posts.previous_page) %>
+        </div>
+        <% end %>
+        <% if @posts.next_page %>
+        <div class="main-post-navigation-next">
+          <%= link_to "Next", params.merge(:page => @posts.next_page) %>
+        </div>
+        <% end %>
+      </footer>
 </section>
-
-<% else %>
-  There are no posts.
 <% end %>
+
 
 <div class="profile">
 <%= image_tag "verdi.jpg" %>
 <span class="greeting">Hello.</span>
 </div>
 
+
+<div class="new-post">
+  <%= link_to 'New Post', new_post_path %>
+</div>
 
 
 
