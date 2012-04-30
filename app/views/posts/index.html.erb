@@ -1,9 +1,8 @@
-
+<% a = current_uri = request.env['PATH_INFO'] %>
 
 <section class="posts-list">
-    <% if !@posts.empty? %>
-       <% @posts_list.each do |post, i| %>
-
+    <% if !@posts_list.empty? %>
+       <% @posts_list.each do |post| %>
       <table>
         <tr>
           <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
@@ -16,37 +15,38 @@
 </section>
 
 <% if !@posts.empty? %>
-<% @posts.each do |post| %>
-<section class="main-post">
-      <div class="main-post-title"><%= post.title %></div>
-      <div class="main-post-content"><%= raw post.content %></div>
-      <div class="main-post-date-time">Published on <%= post.created_at.strftime("%B %e, %Y") %>.</div>
-      <footer class="main-post-navigation">
-<% end %>
-        
-        <%-# next and previous are reversed to preserve experience -%>
-        <div class="main-post-navigation-previous">
-        <% if @posts.next_page %>
-          <%= link_to "Previous", params.merge(:page => @posts.next_page) %>
-        <% end %>
-        </div>
-
-        <div class ="main-post-navigation-next">
-        <% if @posts.previous_page %>
-          <%= link_to "Next", params.merge(:page => @posts.previous_page) %>
-        <% end %>
-        </div>
-
+  <% @posts.each do |post| %>
+    <section class="main-post">
+    <% if a != "/posts" %>
       
+        <div class="main-post-title"><%= @posts_list.first.title %></div>
+        <div class="main-post-content"><%= raw @posts_list.first.content %></div>
+        <div class="main-post-date-time">Published on <%= @posts_list.first.created_at.strftime("%B %e, %Y") %>.</div>
 
-      </footer>
-</section>
+    <% else %>
+
+        <div class="main-post-title"><%= post.title %></div>
+        <div class="main-post-content"><%= raw post.content %></div>
+        <div class="main-post-date-time">Published on <%= post.created_at.strftime("%B %e, %Y") %>.</div>
+
+    <% end %>
+      
+        <footer class="main-post-navigation">
+          <div class ="main-post-navigation-next">
+            <% if @posts.previous_page %>
+              <%= link_to "Next", params.merge(:page => @posts.previous_page) %>
+            <% end %>
+          </div>
+        </footer>
+        
+    </section>
+
+  <% end %>
 <% end %>
-
 
 <div class="profile">
-<%= image_tag "verdi.jpg" %>
-<span class="greeting">Hello.</span>
+  <%= image_tag "verdi.jpg" %>
+  <span class="greeting">Hello.</span>
 </div>
 
 
