@@ -161,6 +161,16 @@ em {
 strong {
 	text-decoration: bold;
 }
+/*<ul class="pagination">
+  <li class="previous_page"><a href="/users?page=1"> ← Previous</a></li>
+  <li><a href="/users?page=1">1</a></li>
+  <li class="current">2</li>
+  <li><a href="/users?page=3">3</a></li>
+  <li class="next_page"><a href="/users?page=3">Next →</a></li>
+</ul>*/
+
+
+
 /* not in use
 .code {
 	border: 1px solid grey;
