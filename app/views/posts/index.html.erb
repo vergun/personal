@@ -22,7 +22,7 @@
       
         <div class="main-post-title"><%= @posts_list.first.title %></div>
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
-        <div class="main-post-date-time">Published on <%= @posts_list.first.created_at.strftime("%B %e, %Y") %>.</div>
+        <div class="main-post-date-time">Published on <%= @posts_list.first.created_at.strftime("%A, %B %e, %Y") %>.</div>
 
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">

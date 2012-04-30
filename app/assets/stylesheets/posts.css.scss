@@ -25,6 +25,10 @@
 .posts-list table tr td a:visited {
     font: normal 18px 'StMarieThin', Georgia, serif;
 }
+.posts-list table tr td a .selected {
+    color: orange;
+    border-bottom: 1px solid orange;
+}
 .new-post {
     display:none;
 }

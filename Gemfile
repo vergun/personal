@@ -8,6 +8,7 @@ gem 'rails', '3.2.2'
 gem 'sqlite3', :group => [:development, :test]
 gem 'pg', :group => [:production]
 gem 'will_paginate', '> 3.0'
+gem 'newrelic_rpm'
 
 gem 'sass-rails',   '~> 3.2.3' #moved this out of the asset group below (verdi)
 
