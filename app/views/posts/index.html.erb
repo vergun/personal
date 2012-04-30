@@ -1,4 +1,6 @@
 <% a = current_uri = request.env['PATH_INFO'] %>
+<% b = @posts_list.size %>
+<%= b %>
 
 <section class="posts-list">
     <% if !@posts_list.empty? %>
@@ -23,13 +25,17 @@
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
         <div class="main-post-date-time">Published on <%= @posts_list.first.created_at.strftime("%B %e, %Y") %>.</div>
 
+      <footer class="main-post-navigation">
+        <div class ="main-post-navigation-next">
+        <%= link_to "Next", params.merge(:page => b-1) %>
+        </div>
+      </footer>
+
     <% else %>
 
         <div class="main-post-title"><%= post.title %></div>
         <div class="main-post-content"><%= raw post.content %></div>
-        <div class="main-post-date-time">Published on <%= post.created_at.strftime("%B %e, %Y") %>.</div>
-
-    <% end %>
+        <div class="main-post-date-time">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
       
         <footer class="main-post-navigation">
           <div class ="main-post-navigation-next">
@@ -38,6 +44,8 @@
             <% end %>
           </div>
         </footer>
+
+    <% end %>
         
     </section>
 
