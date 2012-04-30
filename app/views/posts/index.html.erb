@@ -2,7 +2,8 @@
 
 <section class="posts-list">
     <% if !@posts.empty? %>
-      <% @posts_list.each do |post| %>
+       <% @posts_list.each do |post, i| %>
+
       <table>
         <tr>
           <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
@@ -12,25 +13,32 @@
     <% else %>
       There are no posts.
     <% end %>
-
 </section>
 
-
 <% if !@posts.empty? %>
+<% @posts.each do |post| %>
 <section class="main-post">
-      <div class="main-post-title"><%= @posts.first.title %></div>
-      <div class="main-post-content"><%= raw @posts.first.content %></div>
-      <div class="main-post-date-time"><%= @posts.first.created_at.strftime("%B %e, %Y") %></div>
+      <div class="main-post-title"><%= post.title %></div>
+      <div class="main-post-content"><%= raw post.content %></div>
+      <div class="main-post-date-time">Published on <%= post.created_at.strftime("%B %e, %Y") %>.</div>
       <footer class="main-post-navigation">
-        <div class ="main-post-navigation-previous"><% if @posts.previous_page %>
-          <%= link_to "Previous", params.merge(:page => @posts.previous_page) %>
-          <% end %>
-        </div>
+<% end %>
+        
+        <%-# next and previous are reversed to preserve experience -%>
+        <div class="main-post-navigation-previous">
         <% if @posts.next_page %>
-        <div class="main-post-navigation-next">
-          <%= link_to "Next", params.merge(:page => @posts.next_page) %>
+          <%= link_to "Previous", params.merge(:page => @posts.next_page) %>
         <% end %>
         </div>
+
+        <div class ="main-post-navigation-next">
+        <% if @posts.previous_page %>
+          <%= link_to "Next", params.merge(:page => @posts.previous_page) %>
+        <% end %>
+        </div>
+
+      
+
       </footer>
 </section>
 <% end %>
@@ -45,8 +53,6 @@
 <div class="new-post">
   <%= link_to 'New Post', new_post_path %>
 </div>
-
-
 
 
 
