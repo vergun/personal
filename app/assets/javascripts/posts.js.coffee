@@ -7,17 +7,6 @@ $(document).ready ->
 		loc = location.href.substring(7)
 		loc = loc.substring(loc.indexOf("/"))
 		$('a[href$="'+loc+'"]').addClass("selected")
-		#$('a[href$="#{loc}"]').addClass("selected")
-		#css('color':'orange', 'border-bottom':'1px solid orange');
-		
-
-#$(document).ready -->
-
-#	loc = location.href.substring(7)
-#	loc = loc.substring(loc.indexOf(“/”))
-#	var i = loc.indexOf(“#”);
-#	if (i > -1) loc = loc.substring(0, i);
-#	$(“#navigator a[href='" + loc + "']“).addClass(‘now’);
 
 
 
