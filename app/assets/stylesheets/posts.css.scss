@@ -12,22 +12,10 @@
 }
 .posts-list table tr td a {
     font: normal 18px 'StMarieThin', Georgia, serif;
+}
+.posts-list .selected {
     color: rgba(65, 65, 65, 1);
-}
-.posts-list table tr td a:hover {
-    color: orange;
-    border-bottom: 1px solid orange;
-}
-.posts-list table tr td a:active {
-    color: orange;
-    border-bottom: 1px solid orange;
-}
-.posts-list table tr td a:visited {
-    font: normal 18px 'StMarieThin', Georgia, serif;
-}
-.posts-list table tr td a .selected {
-    color: orange;
-    border-bottom: 1px solid orange;
+    border-bottom: none;
 }
 .new-post {
     display:none;
@@ -44,16 +32,19 @@
     padding: 0 0 20px 0;
 }
 .main-post .main-post-date-time {
-    font: normal 20px'StMarieThin', George, serif;
+    font: normal 20px'StMarieThin', Georgia, serif;
     text-align: right;
     color: grey;
     padding: 10px 15px 0 0;
 }
-.main-post .main-post-content, .main-post .main-post-navigation a {
+.main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
     padding-top: 10px;
     font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
     letter-spacing: 150%;
     line-height: 200%;
+}
+.main-post .main-post-navigation .main-post-navigation-next span {
+font: normal 20px 'ModernPictogramsNormal', Helvetica, sans-serif;
 }
 .main-post .main-post-navigation-previous {
 float: left;
