@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .posts-list {
     float: left;
+    padding-left: 1%;
     width: 10%;
-    padding: 0 50px 0 0;
     border-right: 1px solid rgba(65, 65, 65, .5);
 }
 .posts-list table tr td {
@@ -17,13 +17,14 @@
     color: rgba(65, 65, 65, 1);
     border-bottom: none;
 }
-.new-post {
-    display:none;
+.posts-list-justified {
+    display: none;
 }
 .main-post {
     float: left;
-    padding-left: 30px;
-    width: 65%;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 60%;
 }
 .main-post .main-post-title {
     font: normal 50px 'StMarieThin', Georgia, serif;
@@ -31,7 +32,7 @@
     line-height: 130%;
     padding: 0 0 20px 0;
 }
-.main-post .main-post-date-time {
+.main-post .main-post-date-time, .main-post-navigation .main-post-navigation-next #next-post-label  {
     font: normal 20px'StMarieThin', Georgia, serif;
     text-align: right;
     color: grey;
@@ -43,7 +44,7 @@
     letter-spacing: 150%;
     line-height: 200%;
 }
-.main-post .main-post-navigation .main-post-navigation-next span {
+.main-post .main-post-navigation .main-post-navigation-next #arrow {
 font: normal 20px 'ModernPictogramsNormal', Helvetica, sans-serif;
 }
 .main-post .main-post-navigation-previous {
@@ -57,20 +58,73 @@ width: 90%;
 text-align: right;
 }
 .profile {
-    float: left;
-    width: 5%;
-    padding: 10px 0 0 40px;
-    height: 100%;
 }
 .profile img {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
 }
-.profile .greeting {
-    font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
-    margin: auto auto;
+.profile .greeting, .profile .greeting-extended {
+    display: none;
+}
+
+@media screen and (max-width: 1226px) {
+
+    .posts-list-justified {
+        float: left;
+        width: 100%;
+    }
+    .profile  {
+        float: left;
+        width: 100%;
+        background-color: rgba(249, 249, 249, .5);
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .profile .greeting-extended {
+        display: block;
+        font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
+        color: rgba(1, 1, 1, .5);
+    }
+    .profile img, .profile .greeting {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1060px) {
+    .main-post {
+        float: none;
+        width: 100%;
+    }
+    .posts-list {
+        display: none;
+    }
+    .posts-list-justified {
+        display: inline;
+        width: 100%;
+    }
+    .posts-list-justified ul li {
+        padding: 15px;
+        margin: auto auto;
+    }
+    .posts-list-justified ul li a {
+        font: normal 18px 'StMarieThin', Georgia, serif;
+    }
+    .posts-list-justified .selected {
+        color: rgba(65, 65, 65, 1);
+        border-bottom: none;
+    }
+    .profile .greeting {
+        display: none;
+    }
+    .profile .greeting-extended {
+        font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
+    }
+    .profile img {
+        display: none;
+    }
 }
 
 /*

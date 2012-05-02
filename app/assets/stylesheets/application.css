@@ -122,15 +122,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+    margin: 0 auto 0 auto;
+}
 body {
 	text-align: center;
 	line-height: 1;
-}
-.container {
-	text-align: left;
-	margin: auto auto;
-	width: 800px;
-	padding: 35px 0 10px 0;
+    padding-top: 2%;
 }
 ol, ul {
 	list-style: none;
