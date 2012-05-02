@@ -27,7 +27,7 @@
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">
          <% if @posts_list.size > 1 %>
-           <%= link_to raw("<span id='arrow'>&gt</span>") + " " + Post.find_by_id(second_to_last_post).title, params.merge(:page => @posts_list.size-1) %></span>
+           <%= link_to raw("#{Post.find_by_id(second_to_last_post).title} <span id='arrow'>&gt</span>"), params.merge(:page => @posts_list.size-1) %>
          <% end %>
         </div>
       </footer>
@@ -41,7 +41,7 @@
         <footer class="main-post-navigation">
           <div class ="main-post-navigation-next">
             <% if @posts.previous_page %>
-              <%= link_to raw("<span id='arrow'>&gt</span>") + " " + Post.find_by_id(post.id-1).title, params.merge(:page => @posts.previous_page) %></span>
+              <%= link_to raw("#{Post.find_by_id(post.id-1).title} <span id='arrow'>&gt</span>"), params.merge(:page => @posts.previous_page) %>
             <% end %>
           </div>
         </footer>
