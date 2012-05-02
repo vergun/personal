@@ -171,9 +171,9 @@ em {
 strong {
 	text-decoration: bold;
 }
-img {
+/*img {
 max-width: 100%;
-}
+}*/
 /*<ul class="pagination">
   <li class="previous_page"><a href="/users?page=1"> ← Previous</a></li>
   <li><a href="/users?page=1">1</a></li>
