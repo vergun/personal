@@ -1,5 +1,5 @@
-<% a = current_uri = request.env['PATH_INFO'] %>
-<% b = @posts_list.size %>
+<% current_uri = request.env['PATH_INFO'] %>
+<% second_to_last_post = Post.last.id-1 %>
 
 <section class="posts-list">
     <% if !@posts_list.empty? %>
@@ -18,7 +18,7 @@
 <% if !@posts.empty? %>
   <% @posts.each do |post| %>
     <section class="main-post">
-    <% if a != "/posts" %>
+    <% if current_uri != "/posts" %>
       
         <div class="main-post-title"><%= @posts_list.first.title %></div>
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
@@ -26,8 +26,8 @@
 
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">
-         <% if b > 1 %>
-           <%= link_to raw("Next <span id='arrow'>&gt</span>"), params.merge(:page => b-1) %></span>
+         <% if @posts_list.size > 1 %>
+           <%= link_to raw("<span id='arrow'>&gt</span>") + " " + Post.find_by_id(second_to_last_post).title, params.merge(:page => @posts_list.size-1) %></span>
          <% end %>
         </div>
       </footer>
