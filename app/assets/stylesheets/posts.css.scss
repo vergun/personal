@@ -127,6 +127,40 @@ text-align: right;
     }
 }
 
+    @media screen and (max-width: 480px) {
+    .main-post {
+        float: none;
+        width: 100%;
+    }
+    .posts-list {
+        display: none;
+    }
+    .posts-list-justified {
+        display: inline;
+        width: 100%;
+    }
+    .posts-list-justified ul li {
+        padding: 15px;
+        margin: auto auto;
+    }
+    .posts-list-justified ul li a {
+        font: normal 18px 'StMarieThin', Georgia, serif;
+    }
+    .posts-list-justified .selected {
+        color: rgba(65, 65, 65, 1);
+        border-bottom: none;
+    }
+    .profile .greeting {
+        display: none;
+    }
+    .profile .greeting-extended {
+        font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
+    }
+    .profile img {
+        display: none;
+    }
+}
+
 /*
 .introduction {
     padding-top: 10px;
