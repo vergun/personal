@@ -6,7 +6,7 @@ $(document).ready ->
 	jQuery ->
 		loc = location.href.substring(7)
 		loc = loc.substring(loc.indexOf("/"))
-		if loc == "/" then $(".posts-list table:first-child a").addClass("selected") else 
+		if loc == "/" then $(".posts-list tr:first-child a").addClass("selected") else 
 		$('a[href$="'+loc+'"]').addClass("selected")
 
 

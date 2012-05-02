@@ -3,13 +3,13 @@
 
 <section class="posts-list">
     <% if !@posts_list.empty? %>
-       <% @posts_list.each do |post| %>
       <table>
+       <% @posts_list.each do |post| %>
         <tr>
           <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
         </tr>
-      </table>
     <% end %>
+      </table>
     <% else %>
       There are no posts.
     <% end %>
@@ -41,7 +41,7 @@
         <footer class="main-post-navigation">
           <div class ="main-post-navigation-next">
             <% if @posts.previous_page %>
-              <%= link_to raw("Next <span id='arrow'>&gt</span>"), params.merge(:page => @posts.previous_page) %></span>
+              <%= link_to raw("<span id='arrow'>&gt</span>") + " " + Post.find_by_id(post.id-1).title, params.merge(:page => @posts.previous_page) %></span>
             <% end %>
           </div>
         </footer>
