@@ -124,6 +124,7 @@ footer, header, hgroup, menu, nav, section {
 }
 html {
     margin: 0 auto 0 auto;
+    -webkit-font-smoothing: antialiased;
 }
 body {
 	text-align: center;
@@ -168,6 +169,11 @@ em {
 }
 strong {
 	text-decoration: bold;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280;
 }
 /*img {
 max-width: 100%;

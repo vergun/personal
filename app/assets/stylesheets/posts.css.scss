@@ -5,6 +5,7 @@
     float: left;
     padding-left: 1%;
     width: 10%;
+    min-width: 125px;
     border-right: 1px solid rgba(65, 65, 65, .5);
 }
 .posts-list table tr td {
@@ -24,7 +25,7 @@
     float: left;
     padding-left: 3%;
     padding-right: 3%;
-    width: 60%;
+    width: 70%;
 }
 .main-post .main-post-title {
     font: normal 50px 'StMarieThin', Georgia, serif;
@@ -32,14 +33,17 @@
     line-height: 130%;
     padding: 0 0 20px 0;
 }
-.main-post .main-post-date-time, .main-post-navigation .main-post-navigation-next #next-post-label  {
-    font: normal 20px'StMarieThin', Georgia, serif;
+.main-post .main-post-content {
+    color: rgba(0,0,0,.45);
+    text-align: left;
+}
+.main-post .main-post-date-time {
+    font: normal 15px'StMarieThin', Georgia, serif;
     text-align: right;
-    color: grey;
-    padding: 10px 15px 0 0;
+    color: rgba(65, 65, 65, .85);
+    padding: 15px 15px 20px 0;
 }
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
-    padding-top: 10px;
     font: normal 30px 'CaviarDreamsRegular', Helvetica, sans-serif;
     letter-spacing: 150%;
     line-height: 200%;
@@ -57,43 +61,45 @@ padding: 30px 0 30px 0;
 width: 90%;
 text-align: right;
 }
-.profile {
+.profile .greeting-extended {
+    font: normal 300% 'ModernPictogramsNormal';
+    color: rgba(200, 200, 200, .5);
+    display: inline-block;
 }
-.profile img {
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    -o-border-radius: 1px;
-    border-radius: 1px;
+.profile img:hover {
+    display:none;
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
 }
-.profile .greeting, .profile .greeting-extended {
+.tooltip {
+    width: auto;
+    position: absolute;
+    top: 10px;
+    right: 110px;
+    border-radius: 3px;
+    padding: 10px;
+    background: rgba(0,0,0,.85);
     display: none;
 }
-
-@media screen and (max-width: 1226px) {
-
-    .posts-list-justified {
-        float: left;
-        width: 100%;
-    }
-    .profile  {
-        float: left;
-        width: 100%;
-        background-color: rgba(249, 249, 249, .5);
-        margin-top: 20px;
-        padding: 20px;
-    }
-    .profile .greeting-extended {
-        display: block;
-        font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
-        color: rgba(1, 1, 1, .5);
-    }
-    .profile img, .profile .greeting {
-        display: none;
-    }
-
+.tooltip:after{
+    content:".";
+    text-indent:-9999em;
+    display:block;
+    position:absolute;
+    right:-10px;
+    bottom:120px;
+    width:0;
+    height:0;
+    border-left: 10px solid rgba(0,0,0,.85);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
 }
-
-@media screen and (max-width: 1060px) {
+.tooltip img{
+    width:125px;
+    border-radius:3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+@media screen and (max-width: 800px) {
     .main-post {
         float: none;
         width: 100%;
@@ -113,7 +119,7 @@ text-align: right;
         font: normal 18px 'StMarieThin', Georgia, serif;
     }
     .posts-list-justified .selected {
-        color: rgba(65, 65, 65, 1);
+        color: rgba(65, 65, 65, .85);
         border-bottom: none;
     }
     .profile .greeting {

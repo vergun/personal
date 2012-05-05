@@ -1,6 +1,5 @@
 <% current_uri = request.env['PATH_INFO'] %>
 <% second_to_last_post = Post.last.id-1 %>
-
 <section class="posts-list">
     <% if !@posts_list.empty? %>
       <table>
@@ -27,7 +26,7 @@
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">
          <% if @posts_list.size > 1 %>
-           <span id="next-post-label">Next post:</span>
+           <span id="next-post-label"></span>
            <%= link_to raw("#{Post.find_by_id(second_to_last_post).title} <span id='arrow'>&gt</span>"), params.merge(:page => @posts_list.size-1) %>
          <% end %>
         </div>
@@ -42,7 +41,7 @@
         <footer class="main-post-navigation">
           <div class ="main-post-navigation-next">
             <% if @posts.previous_page %>
-              <span id="next-post-label">Next post:</span>
+              <span id="next-post-label"></span>
               <%= link_to raw("#{Post.find_by_id(post.id-1).title} <span id='arrow'>&gt</span>"), params.merge(:page => @posts.previous_page) %>
             <% end %>
           </div>
@@ -53,26 +52,34 @@
     </section>
 
 
-<section class="posts-list-justified">
-    <% if !@posts_list.empty? %>
-       <% @posts_list.each do |post| %>
-        <ul>
-          <li class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></li>
-        </ul>
-    <% end %>
-    <% else %>
-      There are no posts.
-    <% end %>
-</section>
+  <section class="posts-list-justified">
+      <% if !@posts_list.empty? %>
+         <% @posts_list.each do |post| %>
+          <ul>
+            <li class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></li>
+          </ul>
+      <% end %>
+      <% else %>
+        There are no posts.
+      <% end %>
+  </section>
 
+    <% end %>
   <% end %>
-<% end %>
 
-<div class="profile">
-  <%= image_tag "verdi.jpg" %>
-  <span class="greeting">Hello.</span>
-  <span class="greeting-extended"> More things I do. <a href="http://www.thinkown.com">Own</a> amongst other things and this is my blog.</span>
-</div>
+  <div class="profile">
+    <span class="greeting-extended">
+      <ul>
+        <li class="1">f</li>
+        <li class="2">a</li>
+        <li class="3">m</li> 
+        <li class="4">t</li>
+        <li class="5">F</li>
+      </ul>
+    </span>
+  </div>
+
+  <div class="tooltip"><%= image_tag "verdi.jpg" %></div>
 
 
 

@@ -9,5 +9,11 @@ $(document).ready ->
 		if loc == "/" then $(".posts-list tr:first-child a").addClass("selected") else 
 		$('a[href$="'+loc+'"]').addClass("selected")
 
+		$('.profile .1').hover (->
+			$('.tooltip').stop(true).fadeIn('slow') 
+		), ->
+				$('.tooltip').fadeOut('slow')
+
+
 
 
