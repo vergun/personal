@@ -61,7 +61,7 @@ padding: 30px 0 30px 0;
 width: 90%;
 text-align: right;
 }
-.profile .greeting-extended {
+.profile ul {
     font: normal 300% 'ModernPictogramsNormal';
     color: rgba(200, 200, 200, .5);
     display: inline-block;
@@ -70,6 +70,20 @@ text-align: right;
     display:none;
     -moz-transform: rotate(2deg);
     -webkit-transform: rotate(2deg);
+}
+.me {
+    border: 1px solid rgba(220,220,220,.15);
+    border-radius: 5px;
+    border-bottom: solid transparent;
+}
+.them {
+    border: 1px solid rgba(220,220,220,.15);
+    border-radius: 5px;
+    border-top: solid transparent;
+}
+.me:hover, .them:hover{
+    color: rgba(100, 100, 100, 1);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
 }
 .tooltip {
     width: auto;
@@ -99,6 +113,20 @@ text-align: right;
     border-radius:3px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
+.tooltip aside {
+    display: none;
+}
+.tooltip aside #main-aside {
+    font: normal 15px'StMarieThin', Georgia, serif;
+    color: white;
+
+}
+.tooltip aside #content-aside {
+    font: normal 12px'StMarieThin', Georgia, serif;
+    color: white;
+
+}
+
 @media screen and (max-width: 800px) {
     .main-post {
         float: none;
