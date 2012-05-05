@@ -61,71 +61,47 @@ padding: 30px 0 30px 0;
 width: 90%;
 text-align: right;
 }
+// Profile unordered list
 .profile ul {
+    position: absolute;
+    right:3%;
     font: normal 300% 'ModernPictogramsNormal';
     color: rgba(200, 200, 200, .5);
     display: inline-block;
-}
-.profile img:hover {
-    display:none;
-    -moz-transform: rotate(2deg);
-    -webkit-transform: rotate(2deg);
-}
-.me {
-    border: 1px solid rgba(220,220,220,.15);
-    border-radius: 5px;
-    border-bottom: solid transparent;
-}
-.them {
-    border: 1px solid rgba(220,220,220,.15);
-    border-radius: 5px;
-    border-top: solid transparent;
-}
-.me:hover, .them:hover{
+    width:10%;
+    }
+.profile ul li{
+    position:relative;
+    width:100%;
+    }
+.profile ul li:hover {
     color: rgba(100, 100, 100, 1);
     text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
-}
-.tooltip {
-    width: auto;
-    position: absolute;
-    top: 10px;
-    right: 110px;
-    border-radius: 3px;
-    padding: 10px;
-    background: rgba(0,0,0,.85);
-    display: none;
-}
-.tooltip:after{
-    content:".";
-    text-indent:-9999em;
+    }
+.tooltip{
+    display:none;
+    position:absolute;
+    top:5px;
+    right:70%;
+    padding:10px;
+    border-radius:5px;
+    background:rgba(220,220,220,.70);
+    font: normal 20px 'Helvetica', Georgia, serif;
+    }
+.tooltip:after {
     display:block;
     position:absolute;
+    top:10px;
     right:-10px;
-    bottom:120px;
-    width:0;
-    height:0;
-    border-left: 10px solid rgba(0,0,0,.85);
+    width: 0;
+    height: 0;
+    content:".";
+    text-indent:-9999em;
+    border-left: 10px solid rgba(220, 220, 220,.70);
     border-bottom: 10px solid transparent;
     border-top: 10px solid transparent;
-}
-.tooltip img{
-    width:125px;
-    border-radius:3px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-}
-.tooltip aside {
-    display: none;
-}
-.tooltip aside #main-aside {
-    font: normal 15px'StMarieThin', Georgia, serif;
-    color: white;
+    }
 
-}
-.tooltip aside #content-aside {
-    font: normal 12px'StMarieThin', Georgia, serif;
-    color: white;
-
-}
 
 @media screen and (max-width: 800px) {
     .main-post {

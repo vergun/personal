@@ -8,21 +8,12 @@ $(document).ready ->
 		loc = loc.substring(loc.indexOf("/"))
 		if loc == "/" then $(".posts-list tr:first-child a").addClass("selected") else 
 		$('a[href$="'+loc+'"]').addClass("selected")
+
 #Picture
-		$('.profile .me').hover (->
-			$('.tooltip').stop(true).fadeIn('fast').animate(height:'150px')  
+		$('.profile ul li').hover (-> 
+			$(this).find('.tooltip').stop(true).fadeIn('fast')
 		), ->
-				$('.tooltip').fadeOut('fast')
-#Newspapers
-		$('.profile .them').hover ( ->
-			$('.tooltip').stop(true).animate(height: '500px').find('.tooltip aside').fadeIn('fast')
-		), ->
-				$('.tooltip').animate(height: '150px').fadeOut('fast')
-				
-				
-
-
-
+				$(this).find('.tooltip').fadeOut('fast')
 
 
 
