@@ -1,5 +1,6 @@
 <% current_uri = request.env['PATH_INFO'] %>
 <% second_to_last_post = Post.last.id-1 %>
+
 <section class="posts-list">
     <% if !@posts_list.empty? %>
       <table>
@@ -20,8 +21,9 @@
     <% if current_uri != "/posts" %>
       
         <div class="main-post-title"><%= @posts_list.first.title %></div>
+        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
-        <div class="main-post-date-time">Published on <%= @posts_list.first.created_at.strftime("%A, %B %e, %Y") %>.</div>
+        <div class="main-post-date-time-larger-media">Published on <%= @posts_list.first.created_at.strftime("%A, %B %e, %Y") %>.</div>
 
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">
@@ -35,8 +37,9 @@
     <% else %>
 
         <div class="main-post-title"><%= post.title %></div>
+        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
         <div class="main-post-content"><%= raw post.content %></div>
-        <div class="main-post-date-time">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
+        <div class="main-post-date-time-larger-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
       
         <footer class="main-post-navigation">
           <div class ="main-post-navigation-next">
@@ -51,12 +54,11 @@
         
     </section>
 
-
-  <section class="posts-list-justified">
+  <section class="posts-list-smaller-media" id="more-posts">
       <% if !@posts_list.empty? %>
          <% @posts_list.each do |post| %>
           <ul>
-            <li class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></li>
+            <li class="post-title"><%= link_to "#{raw truncate(post.title, :length => 15)}", params.merge(:page => post) %></li>
           </ul>
       <% end %>
       <% else %>
