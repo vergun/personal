@@ -3,56 +3,57 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@media screen and (min-width: 600px) { //For standard desktop/laptop web browsing
+@media screen and (min-width: 600px) { //For standard desktop/laptop web browsing, default state was : 600px;
+                               //Add a state for small size windows @media screen and (max-width: xx) {}
 .posts-list {
-    float: left;
-    padding-left: 1%;
-    width: 10%;
-    min-width: 125px;
-    border-right: 1px solid rgba(65, 65, 65, .5);
+float: left;
+padding-left: 1%;
+width: 10%;
+min-width: 125px;
+border-right: 1px solid rgba(65, 65, 65, .5);
 }
 .posts-list table tr td {
-    padding: 15px;
+padding: 15px;
 }
 .posts-list table tr td a {
-    font: normal 18px 'StMarieThin', Georgia, serif;
+font: normal 18px 'StMarieThin', Georgia, serif;
 }
 .posts-list .selected {
-    color: rgba(65, 65, 65, 1);
-    border-bottom: none;
+color: rgba(65, 65, 65, 1);
+border-bottom: none;
 }
 .posts-list-smaller-media, .see-more {
-    display: none;
+display: none;
 }
 .main-post {
-    float: left;
-    padding-left: 3%;
-    padding-right: 3%;
-    width: 70%;
+float: left;
+padding-left: 3%;
+padding-right: 3%;
+width: 70%;
 }
 .main-post-date-time-smaller-media {
-    display: none;
+display: none;
 }
 .main-post .main-post-title {
-    font: normal 50px 'StMarieThin', Georgia, serif;
-    letter-spacing: 130%;
-    line-height: 130%;
-    padding: 0 0 20px 0;
+font: normal 50px 'StMarieThin', Georgia, serif;
+letter-spacing: 130%;
+line-height: 130%;
+padding: 0 0 20px 0;
 }
 .main-post .main-post-content {
-    color: rgba(0,0,0,.45);
-    text-align: left;
+color: rgba(0,0,0,.45);
+text-align: left;
 }
 .main-post .main-post-date-time-larger-media {
-    font: normal 15px'StMarieThin', Georgia, serif;
-    text-align: right;
-    color: rgba(65, 65, 65, .85);
-    padding: 15px 15px 20px 0;
+font: normal 15px'StMarieThin', Georgia, serif;
+text-align: right;
+color: rgba(65, 65, 65, .85);
+padding: 15px 15px 20px 0;
 }
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
-    font: normal 30px 'StMarieThin', Helvetica, sans-serif;
-    letter-spacing: 150%;
-    line-height: 200%;
+font: normal 30px 'StMarieThin', Helvetica, sans-serif;
+letter-spacing: 150%;
+line-height: 200%;
 }
 .main-post .main-post-navigation .main-post-navigation-next #arrow {
 font: normal 20px 'ModernPictogramsNormal', Helvetica, sans-serif;
@@ -107,90 +108,95 @@ border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
 }
+
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { //iPad
 .container {
-    padding: 3%;
+padding: 3%;
 }
 html { //set context for font size
-    font: normal 16px 'StMarieThin', Georgia, serif;
+font: normal 16px 'StMarieThin', Georgia, serif;
 }
 .posts-list, .main-post-date-time-larger-media { //remove content for large media
-    display: none;
+display: none;
 }
 .see-more {
-    display: block;
-    width: 100%;
-    background: rgba(0, 0, 0,.85);
-    padding: 2%;
+display: block;
+width: 100%;
+background: rgba(0, 0, 0,.85);
+padding: 2%;
 }
 .main-post {
-    width: 100%;
-    font: normal 200% 'StMarieThin', Helvetica, sans-serif;
-
+width: 100%;
+font: normal 200% 'StMarieThin', Helvetica, sans-serif;
 }
 .main-post .main-post-title {
-    float: none;
-    width: 100%;
-    font: normal 130% 'StMarieThin', Georgia, serif;
-    padding-bottom: 2%;
+float: none;
+width: 100%;
+font: normal 130% 'StMarieThin', Georgia, serif;
+padding-bottom: 2%;
 }
 .main-post .main-post-content {
-    text-align: left;
-    width: 100%;
+text-align: left;
+width: 100%;
 }
 .main-post .main-post-date-time-smaller-media {
-    padding-bottom: 5%;
-    font: normal 50% 'StMarieThin', Georgia, serif;
-    color: rgba(65, 65, 65, .85);
+padding-bottom: 5%;
+font: normal 50% 'StMarieThin', Georgia, serif;
+color: rgba(65, 65, 65, .85);
 }
 .main-post .main-post-navigation-next {
 padding: 1%;
 width: 85%;
 text-align: right;
 }
-footer {
-border-bottom: 1px solid rgba(50,50,50,.25);
-padding: 1%;
-margin: 3%;
-}
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
-    letter-spacing: 150%;
-    line-height: 200%;
+letter-spacing: 150%;
+line-height: 200%;
 }
 .main-post .main-post-navigation .main-post-navigation-next #arrow {
 font: normal 120% 'ModernPictogramsNormal', Helvetica, sans-serif;
 }
 .posts-list-smaller-media {
-    display: block;
-    font: normal 30px 'StMarieThin', Georgia, serif;
-    width: 100%;
-    height: 200px;
+border-top: 1px solid rgba(100, 100, 100, .25);
+display: block;
+font: normal  110% 'StMarieThin', Georgia, serif;
+width: 100%;
+}
+#posts-list-smaller-media-title {
+display: block;
+text-align: left;
+margin: 3% 0 0 15%;
+}
+.posts-list-smaller-media ul {
+margin: 3% 15% 3% 15%;
 }
 .posts-list-smaller-media ul li {
-    float: left;
-}
-.posts-list-smaller-media ul li a {
-    display:block;
-    width: 25%;
+float:left;
+text-align: left;
+width: 33%;
+margin: 3% auto 3% auto;
+padding: 3% auto 3% auto;
 }
 .posts-list-smaller-media .selected {
-    color: rgba(65, 65, 65, .85);
-    border-bottom: none;
+color: rgba(65, 65, 65, .85);
+border-bottom: none;
 }
 //Bottom Profile
 .profile {
-border-top: 1px solid rgba(50,50,50,.25);
-padding: 1%;
-margin: 3%;
+border-top: 1px solid rgba(100, 100, 100, .25);
+float: left;
+width: 100%;
+margin: 2% 0 0 0;
 }
 .profile ul {
-position: absolute;
+position:absolute;
+margin: 4% 40% 0 40%;
 font: normal 300% 'ModernPictogramsNormal';
 color: rgba(200, 200, 200, .5);
-display: inline-block;
 }
 .profile ul li{
-position:relative;
+display: inline;
 }
 .profile ul li:hover {
 color: rgba(0, 0, 0, .85);
@@ -221,36 +227,37 @@ border-top: 10px solid transparent;
 }
 }
 
+
 @media only screen and (max-device-width: 480px) { //iPhone
-    .main-post {
-        float: none;
-        width: 100%;
-    }
-    .posts-list {
-        display: none;
-    }
-    .posts-list-justified {
-        display: inline;
-        width: 100%;
-    }
-    .posts-list-justified ul li {
-        padding: 15px;
-        margin: auto auto;
-    }
-    .posts-list-justified ul li a {
-        font: normal 30px 'StMarieThin', Georgia, serif;
-    }
-    .posts-list-justified .selected {
-        color: rgba(65, 65, 65, 1);
-        border-bottom: none;
-    }
-    .profile .greeting {
-        display: none;
-    }
-    .profile .greeting-extended {
-        font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
-    }
-    .profile img {
-        display: none;
-    }
+.main-post {
+float: none;
+width: 100%;
+}
+.posts-list {
+display: none;
+}
+.posts-list-justified {
+display: inline;
+width: 100%;
+}
+.posts-list-justified ul li {
+padding: 15px;
+margin: auto auto;
+}
+.posts-list-justified ul li a {
+font: normal 30px 'StMarieThin', Georgia, serif;
+}
+.posts-list-justified .selected {
+color: rgba(65, 65, 65, 1);
+border-bottom: none;
+}
+.profile .greeting {
+display: none;
+}
+.profile .greeting-extended {
+font: normal 100% 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+.profile img {
+display: none;
+}
 }

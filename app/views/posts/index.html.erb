@@ -54,7 +54,8 @@
         
     </section>
 
-  <section class="posts-list-smaller-media" id="more-posts">
+  <section class="posts-list-smaller-media">
+      <span id="posts-list-smaller-media-title">More posts</span>
       <% if !@posts_list.empty? %>
          <% @posts_list.each do |post| %>
           <ul>
@@ -64,10 +65,9 @@
       <% else %>
         There are no posts.
       <% end %>
-  </section>
-
-    <% end %>
+      <% end %>
   <% end %>
+  </section>
 
   <div class="profile">
       <ul>
