@@ -129,7 +129,6 @@ html {
 body {
 	text-align: center;
 	line-height: 1;
-    padding-top: 2%;
 }
 ol, ul {
 	list-style: none;
@@ -173,13 +172,6 @@ strong {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1280;
-}
-.copyright {
-    margin: 10%;
-    font: normal 70% 'Helvetica', Georgia, serif;
-    color: rgba(200,200,200,.85);
-    float: right;
 }
 /*img {
 max-width: 100%;

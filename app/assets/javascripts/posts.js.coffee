@@ -6,7 +6,7 @@ $(document).ready ->
 	jQuery ->
 		loc = location.href.substring(7)
 		loc = loc.substring(loc.indexOf("/"))
-		if loc == "/" then $(".posts-list tr:first-child a").addClass("selected") else 
+		if loc == "/" then $(".posts-list tr:nth-child(2) a").addClass("selected") else 
 		$('a[href$="'+loc+'"]').addClass("selected")
 
 #Picture
@@ -14,6 +14,17 @@ $(document).ready ->
 			$(this).find('.tooltip').stop(true).fadeIn('fast')
 		), ->
 				$(this).find('.tooltip').fadeOut('fast')
+
+		$('.posts-list tr:first-child a').toggle (->
+			$(this).addClass('selected')
+			$('.profile').fadeIn('slow')
+		), ->
+			$(this).removeClass('selected')
+			$('.profile').fadeOut('slow')
+
+
+
+
 
 
 

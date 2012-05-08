@@ -4,6 +4,7 @@
 <section class="posts-list">
     <% if !@posts_list.empty? %>
       <table>
+        <tr><td class="reach-me"><a href="#">How to reach me</a><td></tr>
        <% @posts_list.each do |post| %>
         <tr>
           <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
@@ -19,7 +20,6 @@
   <% @posts.each do |post| %>
     <section class="main-post">
     <% if current_uri != "/posts" %>
-      
         <div class="main-post-title"><%= @posts_list.first.title %></div>
         <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
@@ -78,6 +78,8 @@
         <li class="facebook">F <span class="tooltip"><a href="http://www.facebook.com/vergun">Facebook</a></span></li>
       </ul>
   </div>
+
+
 
 
 

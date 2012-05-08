@@ -2,14 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-@media screen and (min-width: 600px) { //For standard desktop/laptop web browsing, default state was : 600px;
-                               //Add a state for small size windows @media screen and (max-width: xx) {}
+@media screen and (min-width: 300px) {
+.container {
+padding-top: 0;
+}
 .posts-list {
 float: left;
 padding-left: 1%;
 width: 10%;
-min-width: 125px;
+min-width: 150px;
 border-right: 1px solid rgba(65, 65, 65, .5);
 }
 .posts-list table tr td {
@@ -26,12 +27,10 @@ border-bottom: none;
 display: none;
 }
 .main-post {
-float: left;
-padding-left: 3%;
-padding-right: 3%;
-width: 70%;
+margin-left: 200px;
+margin-right: 3%;
 }
-.main-post-date-time-smaller-media {
+.main-post-date-time-smaller-media, {
 display: none;
 }
 .main-post .main-post-title {
@@ -68,13 +67,19 @@ padding: 30px 0 30px 0;
 width: 90%;
 text-align: right;
 }
+.profile {
+display:none;
+}
 .profile ul {
 position: absolute;
-right:3%;
+display: block;
+background: rgba(0,0,0,.85);
+box-shadow: -3px -1px 3px rgba(0,0,0,.45);
+height: 100%;
+top: 0;
+right: 0;
 font: normal 300% 'ModernPictogramsNormal';
 color: rgba(200, 200, 200, .5);
-display: inline-block;
-width:10%;
 }
 .profile ul li{
 position:relative;
@@ -88,7 +93,7 @@ text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
 display:none;
 position:absolute;
 top:5px;
-right:80%;
+right:140%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
@@ -106,6 +111,12 @@ text-indent:-9999em;
 border-left: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
+}
+.copyright {
+float: left;
+margin-left: 50%;
+margin-right: 50%;
+min-width: 800px;
 }
 }
 
@@ -225,6 +236,11 @@ border-left: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
+.copyright {
+float: left;
+margin-left: 50%;
+margin-right: 50%;
+}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { //iPhone
@@ -232,7 +248,7 @@ border-top: 10px solid transparent;
 padding: 3%;
 }
 html { //set context for font size
-font: normal 16px 'StMarieThin', Georgia, serif;
+font: normal 32px 'StMarieThin', Georgia, serif;
 }
 .posts-list, .main-post-date-time-larger-media { //remove content for large media
 display: none;
@@ -341,5 +357,10 @@ text-indent:-9999em;
 border-left: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
+}
+.copyright {
+float: left;
+margin-left: 50%;
+margin-right: 50%;
 }
 }
