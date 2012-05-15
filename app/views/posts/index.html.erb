@@ -4,7 +4,7 @@
 <section class="posts-list">
     <% if !@posts_list.empty? %>
       <table>
-        <tr><td class="reach-me"><a href="#">How to reach me</a><td></tr>
+        <tr><td class="reach-me"><a href="#">W</a><td></tr>
        <% @posts_list.each do |post| %>
         <tr>
           <td class="post-title"><%= link_to "#{raw truncate(post.title, :length => 30)}", params.merge(:page => post) %></td>
@@ -34,6 +34,13 @@
         </div>
       </footer>
 
+        <div class="main-footer">
+          <div id="copyright">Copyright © 2012 Verdi Erel Ergun. All rights reserved. <a href="#">Find out why.</a></div>
+          <div id="mobile">
+            <a href="#">O Q</a>
+          </div>
+        </div>
+
     <% else %>
 
         <div class="main-post-title"><%= post.title %></div>
@@ -49,6 +56,13 @@
             <% end %>
           </div>
         </footer>
+
+        <div class="main-footer">
+          <div id="copyright">Copyright © 2012 Verdi Erel Ergun. All rights reserved. <a href="#">Find out why.</a></div>
+          <div id="mobile">
+            <a href="#">O Q</a>
+          </div>
+        </div>
 
     <% end %>
         

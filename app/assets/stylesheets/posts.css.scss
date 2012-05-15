@@ -69,15 +69,16 @@ text-align: right;
 }
 .profile {
 display:none;
+left: 0;
 }
 .profile ul {
 position: absolute;
 display: block;
 background: rgba(0,0,0,.85);
-box-shadow: -3px -1px 3px rgba(0,0,0,.45);
+box-shadow: 3px 1px 3px rgba(0,0,0,.45);
 height: 100%;
 top: 0;
-right: 0;
+left: 0;
 font: normal 300% 'ModernPictogramsNormal';
 color: rgba(200, 200, 200, .5);
 }
@@ -86,14 +87,17 @@ position:relative;
 width:100%;
 }
 .profile ul li:hover {
-color: rgba(0, 0, 0, .85);
+color: rgba(250, 250, 250, .85);
 text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
+}
+.posts-list .reach-me a {
+font: normal 20px 'ModernPictogramsNormal';
 }
 .tooltip{
 display:none;
 position:absolute;
 top:5px;
-right:140%;
+left:140%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
@@ -103,20 +107,30 @@ font: normal 20px 'StMarieThin', Georgia, serif;
 display:block;
 position:absolute;
 top:10px;
-right:-10px;
+left:-10px;
 width: 0;
 height: 0;
 content:".";
 text-indent:-9999em;
-border-left: 10px solid rgba(0, 0, 0,.85);
+border-right: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
-.copyright {
+.main-footer {
 float: left;
-margin-left: 50%;
-margin-right: 50%;
-min-width: 800px;
+width: 85%;
+border: 1px solid rgba(200, 200, 200, .5);
+border-radius: 3px;
+margin: 5%;
+padding: 0.5% 2% 0.5% 2%;
+}
+.main-footer #copyright {
+float:left;
+font: normal 12px 'StMarieThin', Georgia, serif;
+}
+.main-footer #mobile {
+float:right;
+font: normal 20px 'ModernPictogramsNormal';
 }
 }
 
@@ -236,7 +250,8 @@ border-left: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
-.copyright {
+.main-footer {
+display: none;
 float: left;
 margin-left: 50%;
 margin-right: 50%;
@@ -358,7 +373,8 @@ border-left: 10px solid rgba(0, 0, 0,.85);
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
-.copyright {
+.main-footer {
+display: none;
 float: left;
 margin-left: 50%;
 margin-right: 50%;

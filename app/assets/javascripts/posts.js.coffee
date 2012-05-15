@@ -9,7 +9,6 @@ $(document).ready ->
 		if loc == "/" then $(".posts-list tr:nth-child(2) a").addClass("selected") else 
 		$('a[href$="'+loc+'"]').addClass("selected")
 
-#Picture
 		$('.profile ul li').hover (-> 
 			$(this).find('.tooltip').stop(true).fadeIn('fast')
 		), ->
@@ -17,10 +16,25 @@ $(document).ready ->
 
 		$('.posts-list tr:first-child a').toggle (->
 			$(this).addClass('selected')
-			$('.profile').fadeIn('slow')
+			$('.profile').fadeIn('fast')
+			$('.posts-list, .main-post').animate({paddingLeft: '4%'}, 'fast')
+
 		), ->
 			$(this).removeClass('selected')
-			$('.profile').fadeOut('slow')
+			$('.profile').fadeOut('fast')
+			$('.posts-list, .main-post').animate({paddingLeft: '0%'}, 'fast')
+
+		$('.main-footer #mobile a').click ( ->
+			$('.container').animate({opacity: .10}, 'slow')
+			$('.optimized').animate({opacity: 1}, 'slow')
+		)
+		$('.optimized a').click( ->
+			$('.optimized').animate({opacity:0}, 'normal')
+			$('.container').animate({opacity: 1}, 'normal')
+		)
+
+
+
 
 
 
