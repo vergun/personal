@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
+  before_filter :authenticate, :except => [:index]
   # GET /posts
   # GET /posts.json
 
   def index
       @posts = Post.order("created_at ASC").page(params[:page]).per_page(1)
       @posts_list = Post.all(:order => "created_at DESC")
+      @comments = Comment.all
+      @comment = Comment.new
+
       #@posts_main = Post.order("created_at DESC").page(params[:page]).per_page(1)
       #@posts_list_links = Post.all(:order => "created_at ASC")
 
@@ -28,6 +32,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    :authenticate
     @post = Post.new
 
     respond_to do |format|
@@ -84,4 +89,13 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+    protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+    username == "vergun" && password == "monet7235"
+  end
+end
+
 end

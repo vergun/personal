@@ -25,13 +25,14 @@ $(document).ready ->
 			$('.posts-list, .main-post').animate({paddingLeft: '0%'}, 'fast')
 
 		$('.main-footer #mobile a').click ( ->
-			$('.container').animate({opacity: .10}, 'slow')
+			$('.container').animate({opacity: .05}, 'slow')
 			$('.optimized').animate({opacity: 1}, 'slow')
 		)
 		$('.optimized a').click( ->
 			$('.optimized').animate({opacity:0}, 'normal')
 			$('.container').animate({opacity: 1}, 'normal')
 		)
+		$('a.colorbox').colorbox()
 
 
 

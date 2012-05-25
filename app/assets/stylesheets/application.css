@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require colorbox
  *= require_tree .
 */
 @font-face {
@@ -185,6 +186,7 @@ strong {
     margin-top: auto;
     margin-bottom: auto;
     font: normal 30px 'StMarieThin', Georgia, serif;
+    box-shadow: .5px .5px 1px #69a6da;
 }
 .optimized a {
     display:block;
