@@ -32,7 +32,6 @@ $(document).ready ->
 			$('.optimized').animate({opacity:0}, 'normal')
 			$('.container').animate({opacity: 1}, 'normal')
 		)
-		$('a.colorbox').colorbox()
 
 
 

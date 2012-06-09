@@ -1,6 +1,5 @@
 <% current_uri = request.env['PATH_INFO'] %>
-<% second_to_last_post = Post.last.id-1 %>
-<%= stylesheet_link_tag  "colorbox", :media => "all" %>
+<% Post.count >= 1 ? second_to_last_post = Post.last.id-1 : second_to_last_post %>
 <% content_for :javascript_includes do %>
 <%= javascript_include_tag "jquery.colorbox.js" %>
 <% end %>
@@ -38,9 +37,6 @@
         </div>
       </footer>
 
-<div class="comments">
-<% render :partial => "comments_form" %>
-</div>
         <div class="main-footer">
           <div id="copyright">Copyright © 2012 Verdi Erel Ergun. All rights reserved. <a href="#">Find out why.</a></div>
           <div id="mobile">
@@ -63,10 +59,6 @@
             <% end %>
           </div>
         </footer>
-
-<div class="comments">
-<%= render :partial => "comments_form" %>
-</div>
 
         <div class="main-footer">
           <div id="copyright">Copyright © 2012 Verdi Erel Ergun. All rights reserved. <a href="#">Find out why.</a></div>

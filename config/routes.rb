@@ -1,6 +1,5 @@
 Blog::Application.routes.draw do
   resources :users #only => [:new, :edit]
-  resources :comments #only => [:new, :edit]
   resources :posts
   root :to => 'posts#index'
 
