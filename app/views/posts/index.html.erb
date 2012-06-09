@@ -1,8 +1,5 @@
 <% current_uri = request.env['PATH_INFO'] %>
 <% Post.count >= 2 ? second_to_last_post = Post.last.id-1 : second_to_last_post %>
-  <%= content_for :javascript_includes do %>
-    <%= javascript_include_tag "posts" %>
-  <% end %>
 
 
 <section class="posts-list">
