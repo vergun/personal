@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  #before_filter :authenticate, :except => [:index]
+  before_filter :authenticate, :except => [:index]
   # GET /posts
   # GET /posts.json
 
