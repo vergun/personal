@@ -1,14 +1,11 @@
 class PostsController < ApplicationController
-  before_filter :authenticate, :except => [:index]
+  #before_filter :authenticate, :except => [:index]
   # GET /posts
   # GET /posts.json
 
   def index
       @posts = Post.order("created_at ASC").page(params[:page]).per_page(1)
       @posts_list = Post.all(:order => "created_at DESC")
-
-      #@posts_main = Post.order("created_at DESC").page(params[:page]).per_page(1)
-      #@posts_list_links = Post.all(:order => "created_at ASC")
 
     respond_to do |format|
       format.html # index.html.erb
