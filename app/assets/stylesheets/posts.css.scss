@@ -112,8 +112,11 @@ width: 90%;
 text-align: right;
 }
 .profile {
+position: fixed;
 display:none;
 left: 0;
+top: 0;
+bottom: 0;
 }
 .profile ul {
 position: absolute;
@@ -123,6 +126,7 @@ box-shadow: 3px 1px 3px rgba(0,0,0,.45);
 height: 100%;
 top: 0;
 left: 0;
+bottom: 0;
 font: normal 300% 'ModernPictogramsNormal';
 color: rgba(200, 200, 200, .5);
 }
