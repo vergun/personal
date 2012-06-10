@@ -8,6 +8,7 @@ Blog::Application.configure do
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
+  config.assets.digest = true
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
@@ -29,8 +30,9 @@ Blog::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  # Do not compress assets
-  config.assets.compress = false
+  # Do not compress assets | Without these lines javascript won't load. - VE
+  config.assets.compress = true
+  config.assets.compile = false
 
   # Expands the lines which load the assets
   config.assets.debug = true
