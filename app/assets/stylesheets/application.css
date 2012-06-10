@@ -218,19 +218,7 @@ max-width: 100%;
   <li class="next_page"><a href="/users?page=3">Next →</a></li>
 </ul>*/
 
-
-
 /* not in use
-.code {
-	border: 1px solid grey;
-	color: yellow;
-	-webkit-box-shadow: 2px 2px 3px #afafaf;
-	-moz-box-shadow: 2px 2px 3px #afafaf;
-	box-shadow: 2px 2px 1px #afafaf;
-	-webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-	-moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-	text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-}
 .update {
 }
 .update .time {

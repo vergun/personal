@@ -3,6 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @media screen and (min-width: 300px) {
+
+.code {
+border: 1px solid grey;
+color: yellow;
+background: rgba(0, 0, 0, .75);
+padding-left: 3%;
+-webkit-box-shadow: 2px 2px 3px #afafaf;
+-moz-box-shadow: 2px 2px 3px #afafaf;
+box-shadow: 2px 2px 1px #afafaf;
+-webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+-moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+}
+.code-green {
+color: lightgreen;
+}
+.code-grey {
+color:rgba(150,150,150, 1);
+}
+.code-white {
+color: rgba(250, 250, 250, 1);
+}
 .container {
 padding-top: 0;
 }
