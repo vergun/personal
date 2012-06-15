@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$sitefont: 'Helvetica';
+
 @media screen and (min-width: 300px) {
 
 br {
@@ -56,7 +58,7 @@ border-right: 1px solid rgba(65, 65, 65, .5);
 padding: 15px;
 }
 .posts-list table tr td a {
-font: normal 18px 'StMarieThin', Georgia, serif;
+font: normal 18px $sitefont, Georgia, serif;
 }
 .posts-list .selected {
 color: rgba(65, 65, 65, 1);
@@ -73,7 +75,7 @@ margin-right: 3%;
 display: none;
 }
 .main-post .main-post-title {
-font: normal 50px 'StMarieThin', Georgia, serif;
+font: normal 50px $sitefont, Georgia, serif;
 letter-spacing: 130%;
 line-height: 130%;
 padding: 0 0 20px 0;
@@ -83,18 +85,18 @@ color: rgba(0,0,0,.45);
 text-align: left;
 }
 .main-post .main-post-date-time-larger-media {
-font: normal 15px'StMarieThin', Georgia, serif;
+font: normal 15px $sitefont, Georgia, serif;
 text-align: right;
 color: rgba(65, 65, 65, .85);
 padding: 15px 15px 20px 0;
 }
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
-font: normal 30px 'StMarieThin', Helvetica, sans-serif;
+font: normal 30px $sitefont, Helvetica, sans-serif;
 letter-spacing: 150%;
 line-height: 200%;
 }
 ol li {
-font: normal 30px 'StMarieThin', Helvetica, sans-serif;
+font: normal 30px $sitefont, Helvetica, sans-serif;
 letter-spacing: 150%;
 line-height: 200%;
 }
@@ -149,7 +151,7 @@ left:140%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
-font: normal 20px 'StMarieThin', Georgia, serif;
+font: normal 20px $sitefont, Georgia, serif;
 }
 .tooltip:after {
 display:block;
@@ -174,7 +176,7 @@ padding: 0.5% 2% 0.5% 2%;
 }
 .main-footer #copyright {
 float:left;
-font: normal 12px 'StMarieThin', Georgia, serif;
+font: normal 12px $sitefont, Georgia, serif;
 }
 .main-footer #mobile {
 float:right;
@@ -206,7 +208,7 @@ font: normal 200% 'StMarieThin', Helvetica, sans-serif;
 .main-post .main-post-title {
 float: none;
 width: 100%;
-font: normal 130% 'StMarieThin', Georgia, serif;
+font: normal 130% $sitefont, Georgia, serif;
 padding-bottom: 2%;
 }
 .main-post .main-post-content {
@@ -215,7 +217,7 @@ width: 100%;
 }
 .main-post .main-post-date-time-smaller-media {
 padding-bottom: 5%;
-font: normal 50% 'StMarieThin', Georgia, serif;
+font: normal 50% $sitefont, Georgia, serif;
 color: rgba(65, 65, 65, .85);
 }
 .main-post .main-post-navigation-next {
@@ -233,7 +235,7 @@ font: normal 120% 'ModernPictogramsNormal', Helvetica, sans-serif;
 .posts-list-smaller-media {
 border-top: 1px solid rgba(100, 100, 100, .25);
 display: block;
-font: normal  110% 'StMarieThin', Georgia, serif;
+font: normal  110% $sitefont, Georgia, serif;
 width: 100%;
 }
 #posts-list-smaller-media-title {
@@ -283,7 +285,7 @@ right:80%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
-font: normal 20px 'StMarieThin', Georgia, serif;
+font: normal 20px $sitefont, Georgia, serif;
 }
 .tooltip:after {
 display:block;
@@ -311,7 +313,7 @@ margin-right: 50%;
 padding: 3%;
 }
 html { //set context for font size
-font: normal 32px 'StMarieThin', Georgia, serif;
+font: normal 32px $sitefont, Georgia, serif;
 }
 .posts-list, .main-post-date-time-larger-media { //remove content for large media
 display: none;
@@ -324,12 +326,12 @@ padding: 2%;
 }
 .main-post {
 width: 100%;
-font: normal 200% 'StMarieThin', Helvetica, sans-serif;
+font: normal 200% $sitefont, Helvetica, sans-serif;
 }
 .main-post .main-post-title {
 float: none;
 width: 100%;
-font: normal 130% 'StMarieThin', Georgia, serif;
+font: normal 130% $sitefont, Georgia, serif;
 padding-bottom: 2%;
 }
 .main-post .main-post-content {
@@ -338,7 +340,7 @@ width: 100%;
 }
 .main-post .main-post-date-time-smaller-media {
 padding-bottom: 5%;
-font: normal 50% 'StMarieThin', Georgia, serif;
+font: normal 50% $sitefont, Georgia, serif;
 color: rgba(65, 65, 65, .85);
 }
 .main-post .main-post-navigation-next {
@@ -356,7 +358,7 @@ font: normal 120% 'ModernPictogramsNormal', Helvetica, sans-serif;
 .posts-list-smaller-media {
 border-top: 1px solid rgba(100, 100, 100, .25);
 display: block;
-font: normal  110% 'StMarieThin', Georgia, serif;
+font: normal  110% $sitefont, Georgia, serif;
 width: 100%;
 }
 #posts-list-smaller-media-title {
@@ -406,7 +408,7 @@ right:80%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
-font: normal 20px 'StMarieThin', Georgia, serif;
+font: normal 20px $sitefont, Georgia, serif;
 }
 .tooltip:after {
 display:block;
