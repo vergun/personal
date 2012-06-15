@@ -98,7 +98,7 @@ $light: #ffffff;
 $green: #b9fe7d;
 $grey: grey;
 $yellow: yellow;
-$orange: #ff6400;
+$orange: #ff8a00;
 $linkcolor: #0066ff;
 @media screen and (min-width: 300px) {
 
@@ -195,7 +195,7 @@ text-align: left;
 font: normal 15px $sitefont, Georgia, serif;
 text-align: right;
 color: $textcolor;
-padding: 15px 15px 5px 0;
+padding: 2% 10% 2% 0;
 }
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
 font: normal 30px $sitefont, Helvetica, sans-serif;
@@ -268,14 +268,14 @@ width: 0;
 height: 0;
 content:".";
 text-indent:-9999em;
-border-right: 10px solid rgba(0,0,0,.85);;
+border-right: 10px solid $dark;
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
 .main-footer {
 float: left;
 width: 85%;
-border: 1px solid $linkcolor;
+border: 1px solid $grey;
 border-radius: 3px;
 margin: 5%;
 padding: 0.5% 2% 0.5% 2%;
