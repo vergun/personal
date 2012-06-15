@@ -1,48 +1,155 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+/*
+A camera
+B book
+C cd
+D download
+E eye
+F facebook
+G facebook inverse
+H camera
+I trashcan
+J discount tag
+K document
+L thumbsdown
+M ipod
+N phone
+O iphone
+P play(video)
+Q ipad
+R refresh
+S projector
+T twitter
+U twitter inverse
+V document with pencil
+W screen in screen
+X megaphone
+Y text
+Z newspaper
+a say what
+b rotary phone
+c printer
+d pencil
+e guy
+f guy and gal
+g video camera
+______________
+h video camera
+i shopping cart
+j heart
+k thumbsup
+l letter
+m lock
+n document and arrow
+o house
+q lock open
+_______
+q pencil
+r magnifying glass
+s bird
+t minimize
+u maximize
+v globe or discoball
+w cancel
+x magnifyingplus
+y magnifyingminus
+z volumedown
+1 volumeup
+2 grid
+3 list
+4 gridlist
+5 linegraph
+6 bargraph
+7 piechart
+8 alarmbell
+9 sound
+0 sound
+! caution
+@ at symbol
+# dollar
+$ bagofcash
+% checkmark
+^ rss
+& 
+* star
+( wrench and hammer
+) award
+- up
+= information
++ plus
+_ boombox
+~ sign
+` radio tower
+, left arrow
+. right arrow
+/ places
+? shoppingcart
+' downarrow
+" questionmark
+; octagon
+*/
 $sitefont: 'Helvetica';
-
+$wingdings: 'ModernPictogramsNormal';
+$textcolor: #565656;
+$dark: #262626;
+$light: #ffffff;
+$green: #b9fe7d;
+$grey: grey;
+$yellow: yellow;
+$orange: #ff6400;
+$linkcolor: #0066ff;
 @media screen and (min-width: 300px) {
 
 br {
 margin-bottom: 3%;
 display:block;
 }
-.code {
-border: 1px solid grey;
-color: yellow;
-background: rgba(0, 0, 0, .75);
-padding: 0 3%;
-margin-bottom: 3%;
--webkit-box-shadow: 2px 2px 3px #afafaf;
--moz-box-shadow: 2px 2px 3px #afafaf;
-box-shadow: 2px 2px 1px #afafaf;
--webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
--moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-}
 .green {
-color: lightgreen;
+color: $green;
 }
 .grey {
-color:rgba(150,150,150, 1);
+color: $grey;
 }
 .white {
-color: rgba(250, 250, 250, 1);
+color: $light;
 }
-.note {
-border: 1px solid grey;
-background: rgba(180, 210, 210, .75);
+.yellow {
+color: $yellow;
+}
+.code, .note, .warning, .place {
+position: relative;
+border: 1px solid $grey;
 padding-left: 3%;
 margin-bottom: 3%;
 -webkit-box-shadow: 2px 2px 3px #afafaf;
 -moz-box-shadow: 2px 2px 3px #afafaf;
 box-shadow: 2px 2px 1px #afafaf;
--webkit-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
--moz-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
-text-shadow: -3px -3px 5px rgba(100, 100, 100, .75);
+}
+.code {
+color: $yellow;
+background: $dark;
+}
+.note {
+background: darken($light, 5%);
+margin-top: 3%;
+}
+.warning {
+background: darken($light, 5%);
+}
+.place {
+background: darken($light, 5%);
+}
+.note-icon, .warning-icon, .place-icon {
+font: normal 225% $wingdings;
+color: $orange;
+text-shadow: 1px 1px 3px $light;
+position: absolute;
+display: block;
+top: -15px;
+left: -15px;
+-webkit-transform: rotate(-10deg);
 }
 .container {
 padding-top: 0;
@@ -52,7 +159,7 @@ float: left;
 padding-left: 15px;
 width: 150px;
 min-width: 150px;
-border-right: 1px solid rgba(65, 65, 65, .5);
+border-right: 1px solid $textcolor;
 }
 .posts-list table tr td {
 padding: 15px;
@@ -61,7 +168,7 @@ padding: 15px;
 font: normal 18px $sitefont, Georgia, serif;
 }
 .posts-list .selected {
-color: rgba(65, 65, 65, 1);
+color: $textcolor;
 border-bottom: none;
 }
 .posts-list-smaller-media, .see-more {
@@ -81,14 +188,14 @@ line-height: 130%;
 padding: 0 0 20px 0;
 }
 .main-post .main-post-content {
-color: rgba(0,0,0,.45);
+color: $textcolor;
 text-align: left;
 }
 .main-post .main-post-date-time-larger-media {
 font: normal 15px $sitefont, Georgia, serif;
 text-align: right;
-color: rgba(65, 65, 65, .85);
-padding: 15px 15px 20px 0;
+color: $textcolor;
+padding: 15px 15px 5px 0;
 }
 .main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
 font: normal 30px $sitefont, Helvetica, sans-serif;
@@ -101,7 +208,7 @@ letter-spacing: 150%;
 line-height: 200%;
 }
 .main-post .main-post-navigation .main-post-navigation-next #arrow {
-font: normal 20px 'ModernPictogramsNormal', Helvetica, sans-serif;
+font: normal 20px $wingdings, Helvetica, sans-serif;
 }
 .main-post .main-post-navigation-previous {
 float: left;
@@ -123,25 +230,24 @@ bottom: 0;
 .profile ul {
 position: absolute;
 display: block;
-background: rgba(0,0,0,.85);
-box-shadow: 3px 1px 3px rgba(0,0,0,.45);
+background: $dark;
+box-shadow: 3px 1px 3px $textcolor;
 height: 100%;
 top: 0;
 left: 0;
 bottom: 0;
-font: normal 300% 'ModernPictogramsNormal';
-color: rgba(200, 200, 200, .5);
+font: normal 300% $wingdings;
+color: $light;
 }
 .profile ul li{
 position:relative;
 width:100%;
 }
 .profile ul li:hover {
-color: rgba(250, 250, 250, .85);
-text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
+color: darken($light, 20%)
 }
 .posts-list .reach-me a {
-font: normal 20px 'ModernPictogramsNormal';
+font: normal 20px $wingdings;
 }
 .tooltip{
 display:none;
@@ -150,7 +256,7 @@ top:5px;
 left:140%;
 padding:10px;
 border-radius:5px;
-background:rgba(0,0,0,.85);
+background:$dark;
 font: normal 20px $sitefont, Georgia, serif;
 }
 .tooltip:after {
@@ -162,14 +268,14 @@ width: 0;
 height: 0;
 content:".";
 text-indent:-9999em;
-border-right: 10px solid rgba(0, 0, 0,.85);
+border-right: 10px solid rgba(0,0,0,.85);;
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }
 .main-footer {
 float: left;
 width: 85%;
-border: 1px solid rgba(200, 200, 200, .5);
+border: 1px solid $linkcolor;
 border-radius: 3px;
 margin: 5%;
 padding: 0.5% 2% 0.5% 2%;
@@ -180,7 +286,7 @@ font: normal 12px $sitefont, Georgia, serif;
 }
 .main-footer #mobile {
 float:right;
-font: normal 20px 'ModernPictogramsNormal';
+font: normal 20px $wingdings;
 }
 }
 
@@ -190,130 +296,7 @@ font: normal 20px 'ModernPictogramsNormal';
 padding: 3%;
 }
 html { //set context for font size
-font: normal 16px 'StMarieThin', Georgia, serif;
-}
-.posts-list, .main-post-date-time-larger-media { //remove content for large media
-display: none;
-}
-.see-more {
-display: block;
-width: 100%;
-background: rgba(0, 0, 0,.85);
-padding: 2%;
-}
-.main-post {
-width: 100%;
-font: normal 200% 'StMarieThin', Helvetica, sans-serif;
-}
-.main-post .main-post-title {
-float: none;
-width: 100%;
-font: normal 130% $sitefont, Georgia, serif;
-padding-bottom: 2%;
-}
-.main-post .main-post-content {
-text-align: left;
-width: 100%;
-}
-.main-post .main-post-date-time-smaller-media {
-padding-bottom: 5%;
-font: normal 50% $sitefont, Georgia, serif;
-color: rgba(65, 65, 65, .85);
-}
-.main-post .main-post-navigation-next {
-padding: 1%;
-width: 85%;
-text-align: right;
-}
-.main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
-letter-spacing: 150%;
-line-height: 200%;
-}
-.main-post .main-post-navigation .main-post-navigation-next #arrow {
-font: normal 120% 'ModernPictogramsNormal', Helvetica, sans-serif;
-}
-.posts-list-smaller-media {
-border-top: 1px solid rgba(100, 100, 100, .25);
-display: block;
-font: normal  110% $sitefont, Georgia, serif;
-width: 100%;
-}
-#posts-list-smaller-media-title {
-display: block;
-text-align: left;
-margin: 3% 0 0 15%;
-}
-.posts-list-smaller-media ul {
-margin: 3% 15% 3% 15%;
-}
-.posts-list-smaller-media ul li {
-float:left;
-text-align: left;
-width: 33%;
-margin: 3% auto 3% auto;
-padding: 3% auto 3% auto;
-}
-.posts-list-smaller-media .selected {
-color: rgba(65, 65, 65, .85);
-border-bottom: none;
-}
-//Bottom Profile
-.profile {
-border-top: 1px solid rgba(100, 100, 100, .25);
-float: left;
-width: 100%;
-margin: 2% 0 0 0;
-}
-.profile ul {
-position:absolute;
-margin: 4% 40% 0 40%;
-font: normal 300% 'ModernPictogramsNormal';
-color: rgba(200, 200, 200, .5);
-}
-.profile ul li{
-display: inline;
-}
-.profile ul li:hover {
-color: rgba(0, 0, 0, .85);
-text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
-}
-.tooltip{
-display:none;
-position:absolute;
-top:5px;
-right:80%;
-padding:10px;
-border-radius:5px;
-background:rgba(0,0,0,.85);
-font: normal 20px $sitefont, Georgia, serif;
-}
-.tooltip:after {
-display:block;
-position:absolute;
-top:10px;
-right:-10px;
-width: 0;
-height: 0;
-content:".";
-text-indent:-9999em;
-border-left: 10px solid rgba(0, 0, 0,.85);
-border-bottom: 10px solid transparent;
-border-top: 10px solid transparent;
-}
-.main-footer {
-display: none;
-float: left;
-margin-left: 50%;
-margin-right: 50%;
-}
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { //iPhone
-.container {
-padding: 3%;
-}
-html { //set context for font size
-font: normal 32px $sitefont, Georgia, serif;
+font: normal 16px $sitefont, Helvetica, serif;
 }
 .posts-list, .main-post-date-time-larger-media { //remove content for large media
 display: none;
@@ -331,7 +314,7 @@ font: normal 200% $sitefont, Helvetica, sans-serif;
 .main-post .main-post-title {
 float: none;
 width: 100%;
-font: normal 130% $sitefont, Georgia, serif;
+font: normal 130% $sitefont, Helvetica, serif;
 padding-bottom: 2%;
 }
 .main-post .main-post-content {
@@ -340,8 +323,8 @@ width: 100%;
 }
 .main-post .main-post-date-time-smaller-media {
 padding-bottom: 5%;
-font: normal 50% $sitefont, Georgia, serif;
-color: rgba(65, 65, 65, .85);
+font: normal 50% $sitefont, Helvetica, serif;
+color: $textcolor;
 }
 .main-post .main-post-navigation-next {
 padding: 1%;
@@ -353,12 +336,12 @@ letter-spacing: 150%;
 line-height: 200%;
 }
 .main-post .main-post-navigation .main-post-navigation-next #arrow {
-font: normal 120% 'ModernPictogramsNormal', Helvetica, sans-serif;
+font: normal 120% $wingdings, Helvetica, sans-serif;
 }
 .posts-list-smaller-media {
-border-top: 1px solid rgba(100, 100, 100, .25);
+border-top: 1px solid $textcolor;
 display: block;
-font: normal  110% $sitefont, Georgia, serif;
+font: normal  110% $sitefont, Helvetica, serif;
 width: 100%;
 }
 #posts-list-smaller-media-title {
@@ -377,12 +360,12 @@ margin: 3% auto 3% auto;
 padding: 3% auto 3% auto;
 }
 .posts-list-smaller-media .selected {
-color: rgba(65, 65, 65, .85);
+color: $textcolor;
 border-bottom: none;
 }
 //Bottom Profile
 .profile {
-border-top: 1px solid rgba(100, 100, 100, .25);
+border-top: 1px solid $dark;
 float: left;
 width: 100%;
 margin: 2% 0 0 0;
@@ -390,15 +373,14 @@ margin: 2% 0 0 0;
 .profile ul {
 position:absolute;
 margin: 4% 40% 0 40%;
-font: normal 300% 'ModernPictogramsNormal';
-color: rgba(200, 200, 200, .5);
+font: normal 300% $wingdings;
+color: $textcolor;
 }
 .profile ul li{
 display: inline;
 }
 .profile ul li:hover {
-color: rgba(0, 0, 0, .85);
-text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
+color: $dark;
 }
 .tooltip{
 display:none;
@@ -408,7 +390,7 @@ right:80%;
 padding:10px;
 border-radius:5px;
 background:rgba(0,0,0,.85);
-font: normal 20px $sitefont, Georgia, serif;
+font: normal 20px $sitefont, Helvetica, serif;
 }
 .tooltip:after {
 display:block;
@@ -419,7 +401,129 @@ width: 0;
 height: 0;
 content:".";
 text-indent:-9999em;
-border-left: 10px solid rgba(0, 0, 0,.85);
+border-left: 10px solid $dark;
+border-bottom: 10px solid transparent;
+border-top: 10px solid transparent;
+}
+.main-footer {
+display: none;
+float: left;
+margin-left: 50%;
+margin-right: 50%;
+}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { //iPhone
+.container {
+padding: 3%;
+}
+html { //set context for font size
+font: normal 32px $sitefont, Helvetica, serif;
+}
+.posts-list, .main-post-date-time-larger-media { //remove content for large media
+display: none;
+}
+.see-more {
+display: block;
+width: 100%;
+background: rgba(0, 0, 0,.85);
+padding: 2%;
+}
+.main-post {
+width: 100%;
+font: normal 200% $sitefont, Helvetica, sans-serif;
+}
+.main-post .main-post-title {
+float: none;
+width: 100%;
+font: normal 130% $sitefont, Helvetica, serif;
+padding-bottom: 2%;
+}
+.main-post .main-post-content {
+text-align: left;
+width: 100%;
+}
+.main-post .main-post-date-time-smaller-media {
+padding-bottom: 5%;
+font: normal 50% $sitefont, Helvetica, serif;
+color: $textcolor;
+}
+.main-post .main-post-navigation-next {
+padding: 1%;
+width: 85%;
+text-align: right;
+}
+.main-post .main-post-content, .main-post .main-post-navigation .main-post-navigation-next {
+letter-spacing: 150%;
+line-height: 200%;
+}
+.main-post .main-post-navigation .main-post-navigation-next #arrow {
+font: normal 120% $wingdings, Helvetica, sans-serif;
+}
+.posts-list-smaller-media {
+border-top: 1px solid $textcolor;
+display: block;
+font: normal  110% $sitefont, Helvetica, serif;
+width: 100%;
+}
+#posts-list-smaller-media-title {
+display: block;
+text-align: left;
+margin: 3% 0 0 15%;
+}
+.posts-list-smaller-media ul {
+margin: 3% 15% 3% 15%;
+}
+.posts-list-smaller-media ul li {
+float:left;
+text-align: left;
+width: 33%;
+margin: 3% auto 3% auto;
+padding: 3% auto 3% auto;
+}
+.posts-list-smaller-media .selected {
+color: $textcolor;
+border-bottom: none;
+}
+//Bottom Profile
+.profile {
+border-top: 1px solid $textcolor;
+float: left;
+width: 100%;
+margin: 2% 0 0 0;
+}
+.profile ul {
+position:absolute;
+margin: 4% 40% 0 40%;
+font: normal 300% $wingdings;
+color: $textcolor;
+}
+.profile ul li{
+display: inline;
+}
+.profile ul li:hover {
+color: rgba(0, 0, 0, .85);
+}
+.tooltip{
+display:none;
+position:absolute;
+top:5px;
+right:80%;
+padding:10px;
+border-radius:5px;
+background: $dark;
+font: normal 20px $sitefont, Helvetica, serif;
+}
+.tooltip:after {
+display:block;
+position:absolute;
+top:10px;
+right:-10px;
+width: 0;
+height: 0;
+content:".";
+text-indent:-9999em;
+border-left: 10px solid $dark;
 border-bottom: 10px solid transparent;
 border-top: 10px solid transparent;
 }

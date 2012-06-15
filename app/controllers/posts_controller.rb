@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @tags = @post.tags
 
     respond_to do |format|
       format.html # show.html.erb
@@ -28,6 +29,7 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
+    @tag = Tag.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,12 +40,14 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @tag = Tag.all
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
+    @tag = Tag.new(params[:tag])
 
     respond_to do |format|
       if @post.save

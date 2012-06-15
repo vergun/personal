@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
   resources :users #only => [:new, :edit]
   resources :posts
+  resources :tags
   root :to => 'posts#index'
 
   # The priority is based upon order of creation:

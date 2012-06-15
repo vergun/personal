@@ -3,6 +3,7 @@
 @import "users";
 @import "scaffolds";
 
+$linkcolor: #0066ff;
 @font-face {
     font-family: 'StMarieThin';
     src: url('StMarie-Thin-webfont.eot');
@@ -139,15 +140,15 @@ table {
 }
 a {
     text-decoration: none;
-    color: #69a6da;
+    color: $linkcolor;
 }
 a:hover {
     text-decoration: none;
-    border-bottom: 1px solid #69a6da;
+    border-bottom: 1px solid $linkcolor;
 }
 a:active {
     text-decoration: none;
-    border-bottom: 1px solid #69a6da;
+    border-bottom: 1px solid $linkcolor;
 }
 a:visited {
     text-decoration: none;
@@ -176,8 +177,8 @@ strong {
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
-    font: normal 30px 'StMarieThin', Georgia, serif;
-    box-shadow: .5px .5px 1px #69a6da;
+    font: normal 30px $sitefont, Helvetica, serif;
+    box-shadow: .5px .5px 1px $linkcolor;
 }
 .optimized a {
     display:block;
