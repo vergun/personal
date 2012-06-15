@@ -20,11 +20,9 @@
     <section class="main-post">
     <% if current_uri != "/posts" %>
         <div class="main-post-title"><%= @posts_list.first.title %></div>
-        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
-        <div class="main-post-date-time-smaller-media"><%= @posts_list.first.updated_at != @posts_list.first.created_at ? "Last updated on " + @posts_list.first.updated_at.strftime("%A, %B, %e, %Y") + '.' : '' %></div>
+        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>. <br /><%= @posts_list.first.updated_at != @posts_list.first.created_at ? "  Updated " + time_ago_in_words(@posts_list.first.updated_at) + ' ago.' : '' %></div>
         <div class="main-post-content"><%= raw @posts_list.first.content %></div>
-        <div class="main-post-date-time-larger-media">Published on <%= @posts_list.first.created_at.strftime("%A, %B %e, %Y") %>.</div>
-        <div class="main-post-date-time-larger-media"><%= @posts_list.first.updated_at != @posts_list.first.created_at ? "Last updated on " + @posts_list.first.updated_at.strftime("%A, %B, %e, %Y") + '.' : '' %></div>
+        <div class="main-post-date-time-larger-media">Published on <%= @posts_list.first.created_at.strftime("%A, %B %e, %Y") %>. <br /> <%= @posts_list.first.updated_at != @posts_list.first.created_at ? "  Updated " + time_ago_in_words(@posts_list.first.updated_at).strftime("%A, %B, %e, %Y") + ' ago.' : '' %></div>
 
       <footer class="main-post-navigation">
         <div class ="main-post-navigation-next">
@@ -44,11 +42,9 @@
 
     <% else %>
         <div class="main-post-title"><%= post.title %></div>
-        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
-        <div class="main-post-date-time-smaller-media"><%= post.updated_at != post.created_at ? "Last updated on " + post.updated_at.strftime("%A, %B, %e, %Y") + '.' : '' %></div>
+        <div class="main-post-date-time-smaller-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>. <br /> <%= post.updated_at != post.created_at ? "  Updated " + time_ago_in_words(post.updated_at) + ' ago.' : '' %></div>
         <div class="main-post-content"><%= raw post.content %></div>
-        <div class="main-post-date-time-larger-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>.</div>
-         <div class="main-post-date-time-larger-media"><%= post.updated_at != post.created_at ? "Last updated on " + post.updated_at.strftime("%A, %B, %e, %Y") + '.' : '' %></div>
+        <div class="main-post-date-time-larger-media">Published on <%= post.created_at.strftime("%A, %B %e, %Y") %>. <br /> <%= post.updated_at != post.created_at ? "  Updated " + time_ago_in_words(post.updated_at) + ' ago.' : '' %></div>
 
       
         <footer class="main-post-navigation">
