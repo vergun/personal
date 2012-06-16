@@ -99,6 +99,8 @@ $green: #b9fe7d;
 $grey: grey;
 $yellow: yellow;
 $orange: #ff8a00;
+$red: #ff0033;
+$purple: #9600ff;
 $linkcolor: #0066ff;
 @media screen and (min-width: 300px) {
 
@@ -121,7 +123,7 @@ color: $yellow;
 .code, .note, .warning, .place {
 position: relative;
 border: 1px solid $grey;
-padding-left: 3%;
+padding-left: 35px;
 margin-bottom: 3%;
 -webkit-box-shadow: 2px 2px 3px #afafaf;
 -moz-box-shadow: 2px 2px 3px #afafaf;
@@ -143,13 +145,21 @@ background: darken($light, 5%);
 }
 .note-icon, .warning-icon, .place-icon {
 font: normal 225% $wingdings;
-color: $orange;
 text-shadow: 1px 1px 3px $light;
 position: absolute;
 display: block;
 top: -15px;
-left: -15px;
+left: -25px;
 -webkit-transform: rotate(-10deg);
+}
+.note-icon {
+color: $orange;
+}
+.warning-icon {
+color: $red;
+}
+.place-icon {
+color: $purple;
 }
 .container {
 padding-top: 0;
