@@ -1,4 +1,7 @@
 Blog::Application.routes.draw do
+
+match '/shared' => 'pages#shared', :as => :shared
+
   resources :users #only => [:new, :edit]
   resources :posts
   resources :tags

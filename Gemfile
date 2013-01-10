@@ -10,6 +10,7 @@ gem 'pg', :group => [:production]
 gem 'will_paginate', '> 3.0'
 gem 'newrelic_rpm'
 gem 'compass-rails'
+gem 'psych', '~> 1.2.2'
 
 gem 'sass-rails',   '~> 3.2.3' #moved this out of the asset group below (verdi)
 
