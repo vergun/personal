@@ -1,8 +1,18 @@
 class PagesController < ActionController::Base
-  layout 'application'
   protect_from_forgery
+  layout 'application'
+  respond_to :js
 
-  def shared
+  def index
+  end
+
+  def projects
+  end
+
+  def painting
+  end
+
+  def about
   end
 
 end

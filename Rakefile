@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Blog::Application.load_tasks
+Personal2::Application.load_tasks
