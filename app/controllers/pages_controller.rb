@@ -5,6 +5,9 @@ class PagesController < ActionController::Base
 
   def index
   end
+  
+  def newindex
+  end
 
   def projects
   end
